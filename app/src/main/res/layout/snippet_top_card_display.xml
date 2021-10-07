@@ -1,0 +1,36 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/white_grey_border_bottom">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/backArrow"
+                        android:src="@drawable/ic_arrow_back"
+                />
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:text="編集"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:textSize="20sp"
+                        android:textColor="@color/link_blue"
+                        android:id="@+id/option_editBtn"/>
+
+            </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+</merge>

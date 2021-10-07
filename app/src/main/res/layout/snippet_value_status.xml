@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/sunIv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/sun"/>
+
+        <TextView
+                android:layout_toRightOf="@+id/sunIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="よい評価"
+                android:layout_centerVertical="true"
+        />
+
+        <TextView
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2件"
+                android:layout_centerVertical="true"
+        />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/cloudIv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/cloud"/>
+
+        <TextView
+                android:layout_toRightOf="@+id/cloudIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="よい評価"
+                android:layout_centerVertical="true"
+        />
+
+        <TextView
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2件"
+                android:layout_centerVertical="true"
+        />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/rainIv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/rain"/>
+
+        <TextView
+                android:layout_toRightOf="@+id/rainIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="よい評価"
+                android:layout_centerVertical="true"
+        />
+
+        <TextView
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2件"
+                android:layout_centerVertical="true"
+        />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

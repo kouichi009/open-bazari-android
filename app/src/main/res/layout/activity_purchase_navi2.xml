@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Activities.PurchaseNavi2Activity">
+
+    <include layout="@layout/snippet_simple_backarrow"/>
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/lightGray"
+            android:id="@+id/scrollView"
+            android:layout_weight="1">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="8dp">
+
+                <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/postIv"
+                        android:src="@drawable/ic_launcher_background"/>
+
+                <TextView
+                        android:layout_marginLeft="@dimen/appbar_padding_top"
+                        android:layout_marginRight="@dimen/appbar_padding_top"
+                        android:text="TextViewTextViewTextViewTextViewTextTextViewTextViTextViewTextViewTextViewTexTextViewTextViewTextViewTexTextViewTextViewTextViewTexTextViewTextViewTextViewTexewTextViewTextViewTextTextViewTextViewTextViewTextViewTextTextViewTextViewTextViewTextViewText"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:id="@+id/titleTv"
+                        android:textSize="12sp"
+                        android:minLines="1"
+                        android:maxLines="2"
+                        android:layout_toRightOf="@+id/postIv"
+                />
+
+                <TextView
+                        android:id="@+id/priceTv1"
+                        android:layout_marginLeft="@dimen/appbar_padding_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3000円"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@+id/postIv"
+                        android:layout_alignParentBottom="true"/>
+
+                <TextView
+                        android:id="@+id/shipPayerTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="送料込み(あなたが負担)"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:textSize="12sp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                    android:layout_margin="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorRed"
+                    android:text="受け取り確認と評価をしてください"
+                    android:textSize="17sp"/>
+
+            <TextView
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="商品が発送されました。到着後、商品の確認と出品者の評価を行ってください。"
+                    android:textSize="12sp"/>
+
+            <RelativeLayout
+                    android:layout_margin="16dp"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                <TextView
+                        android:id="@+id/payCompleDateTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="支払い完了日:2018年11月15日"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+
+                <TextView
+                        android:id="@+id/shipDeadLineDateTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="支払い完了日:2018年11月15日"
+                        android:textColor="@color/black"
+                        android:layout_below="@+id/payCompleDateTv"
+                        android:paddingTop="8dp"
+                        android:textSize="12sp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                        android:text="取引の評価"/>
+
+
+                <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/radioGroup">
+
+                    <RadioButton
+                            android:id="@+id/radio_sun"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/good_seller"
+                            android:onClick="radioButton"
+                            android:checked="true"/>
+
+                    <RelativeLayout
+                            android:padding="@dimen/appbar_padding_top"
+                            android:background="@drawable/flame_gray_background"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <TextView
+                                android:id="@+id/tv1"
+                                android:text="・スムーズに取引を終えられた"
+                                android:textSize="12sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                        />
+
+                        <TextView
+                                android:id="@+id/tv2"
+                                android:layout_marginTop="@dimen/appbar_padding_top"
+                                android:layout_below="@+id/tv1"
+                                android:text="・また取引をしたいと思える出品者だった"
+                                android:textSize="12sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                        />
+
+                    </RelativeLayout>
+
+                    <RadioButton
+                            android:layout_marginTop="@dimen/activity_horizontal_margin"
+                            android:id="@+id/radio_cloud"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/normal_seller"
+                            android:onClick="radioButton"/>
+
+                    <RelativeLayout
+                            android:padding="@dimen/appbar_padding_top"
+                            android:background="@drawable/flame_gray_background"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <TextView
+                                android:id="@+id/tv3"
+                                android:text="・スムーズに取引を終えられなかった"
+                                android:textSize="12sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+
+                        <TextView
+                                android:id="@+id/tv4"
+                                android:layout_marginTop="@dimen/appbar_padding_top"
+                                android:layout_below="@+id/tv3"
+                                android:text="・気持ちのよい取引ではなかった"
+                                android:textSize="12sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+
+                    <RadioButton
+                            android:layout_marginTop="@dimen/activity_horizontal_margin"
+                            android:id="@+id/radio_rain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bad_seller"
+                            android:onClick="radioButton"/>
+
+                    <RelativeLayout
+                            android:padding="@dimen/appbar_padding_top"
+                            android:background="@drawable/flame_gray_background"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <TextView
+                                android:id="@+id/tv5"
+                                android:text="・取引に大きなトラブルがあった"
+                                android:textSize="12sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+
+                    </RelativeLayout>
+
+                </RadioGroup>
+
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true">
+
+
+                    <EditText
+                            android:id="@+id/valueCommentEdit"
+                            android:layout_margin="@dimen/activity_horizontal_margin"
+                            android:padding="@dimen/appbar_padding_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:gravity="left|top"
+                            android:textSize="12sp"
+                            android:hint="商品の感想や、お礼のメッセージなどを書くと喜ばれます。"
+                            android:background="@drawable/flame_gray"
+                            android:inputType="textMultiLine"/>
+
+                    <CheckBox
+                            android:id="@+id/checkBox"
+                            android:layout_marginStart="@dimen/appbar_padding_top"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin"
+                            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="商品を受け取り、内容を確認しました。"/>
+
+                    <Button
+                            android:id="@+id/valueBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="valueTouchUpInside"
+                            android:background="@color/colorAccent"
+                            android:textColor="@color/white"
+                            android:text="評価を投稿する"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                    android:layout_margin="16dp"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="支払い金額"
+                        android:textColor="@color/black"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="3000円"
+                        android:id="@+id/priceTv2"
+                        android:textColor="@color/black"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:id="@+id/view"
+                        android:background="@color/grey"
+                        android:layout_below="@+id/priceTv2"
+                        android:layout_marginTop="8dp"
+                />
+
+                <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_below="@+id/view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="配送先住所"
+                        android:id="@+id/shipTo"
+                />
+
+                <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_below="@+id/shipTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="〒569-0013"
+                        android:textColor="@color/black"
+                        android:id="@+id/postalCodeTv"/>
+
+                <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_below="@+id/postalCodeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="大阪府高槻市野田2-9-12レジデンス203号"
+                        android:textColor="@color/black"
+                        android:id="@+id/addressTv"/>
+
+                <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_below="@+id/addressTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="中西紘一"
+                        android:textColor="@color/black"
+                        android:id="@+id/nameTv"/>
+
+
+            </RelativeLayout>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="配送情報"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="12sp"
+                    android:layout_marginStart="16dp"/>
+            <TextView
+                    android:id="@+id/shipWayTv"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="配送方法:未定"/>
+
+            <TextView
+                    android:id="@+id/shipDeadLineTv"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="発送期限：支払い後、4〜7日で発送"/>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey">
+
+                <ImageView
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/ic_email_white"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/email_Iv"
+                />
+
+                <TextView
+                        android:layout_marginStart="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="取引メッセージ"
+                        android:textColor="@color/white"
+                        android:layout_toRightOf="@+id/email_Iv"
+                        android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/relLayout2">
+
+                <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+            >
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true">
+
+                    <EditText
+                            android:id="@+id/chatEdit"
+                            android:layout_margin="@dimen/activity_horizontal_margin"
+                            android:padding="@dimen/appbar_padding_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:gravity="left|top"
+                            android:textSize="12sp"
+                            android:hint="ここにメッセージ内容を記入してください。"
+                            android:background="@drawable/flame_gray"
+                            android:inputType="textMultiLine"/>
+
+
+                    <Button
+                            android:id="@+id/chatBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:onClick="chatTouchUpInside"
+                            android:background="@color/colorAccent"
+                            android:textColor="@color/white"
+                            android:text="取引メッセージを送る"/>
+
+                    <RelativeLayout
+                            android:padding="@dimen/appbar_padding_top"
+                            android:layout_margin="@dimen/activity_horizontal_margin"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white">
+
+                        <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="販売者情報"/>
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/profileIv"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:src="@mipmap/ic_launcher"
+                                android:layout_marginTop="@dimen/appbar_padding_top"
+                                android:layout_below="@+id/textView"/>
+
+                        <TextView
+                                android:layout_below="@+id/textView"
+                                android:layout_toRightOf="@+id/profileIv"
+                                android:id="@+id/usernameTv"
+                                android:layout_marginLeft="@dimen/appbar_padding_top"
+                                android:layout_marginTop="@dimen/appbar_padding_top"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="user13"/>
+
+                        <LinearLayout
+                                android:id="@+id/valueLayout"
+                                android:layout_marginTop="@dimen/appbar_padding_top"
+                                android:layout_below="@+id/usernameTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/profileIv"
+                                android:layout_marginLeft="@dimen/appbar_padding_top"
+                                android:orientation="horizontal">
+
+                            <ImageView
+                                    android:id="@+id/sunIv"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/sun"/>
+
+                            <TextView
+                                    android:id="@+id/sunTv"
+                                    android:layout_marginLeft="@dimen/fourdp_spacing"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10"/>
+
+                            <ImageView
+                                    android:id="@+id/cloudIv"
+                                    android:layout_marginLeft="@dimen/fourdp_spacing"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/cloud"/>
+
+                            <TextView
+                                    android:id="@+id/cloudTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/fourdp_spacing"
+                                    android:text="10"/>
+
+                            <ImageView
+                                    android:id="@+id/rainIv"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginLeft="@dimen/fourdp_spacing"
+                                    android:src="@drawable/rain"/>
+
+                            <TextView
+                                    android:id="@+id/rainTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/fourdp_spacing"
+                                    android:text="10"/>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

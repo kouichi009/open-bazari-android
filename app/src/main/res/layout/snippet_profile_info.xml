@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_header_height"
+        android:background="@color/dark_grey"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                android:contentDescription="@string/nav_header_desc"
+                android:src="@mipmap/ic_launcher"
+                android:id="@+id/profileIv"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+        <TextView
+                android:layout_width="172dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                android:text="@string/nav_header_title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:id="@+id/usernameTv"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="16dp"/>
+
+
+    </LinearLayout>
+
+
+    <TextView
+            android:layout_gravity="center"
+            android:text="出品数"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3" android:textSize="18sp"/>
+    <TextView
+            android:layout_gravity="center"
+
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/postCountTv"
+            android:textSize="18sp"/>
+    <View
+            android:layout_marginTop="@dimen/appbar_padding_top"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+    />
+
+    <RelativeLayout
+            android:id="@+id/valueLayout"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           >
+
+        <TextView
+                android:layout_centerVertical="true"
+                android:text="取引の評価"
+                android:layout_marginLeft="@dimen/appbar_padding_top"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+        />
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true">
+
+            <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/sun"
+                    android:layout_marginRight="@dimen/fourdp_spacing"
+            />
+
+            <TextView
+                    android:id="@+id/sunTv"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/fourdp_spacing"
+            />
+
+            <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/cloud"
+                    android:layout_marginRight="@dimen/fourdp_spacing"
+            />
+
+            <TextView
+                    android:id="@+id/cloudTv"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:layout_marginRight="@dimen/fourdp_spacing"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+            />
+
+            <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/rain"
+                    android:layout_marginRight="@dimen/fourdp_spacing"
+            />
+
+            <TextView
+                    android:id="@+id/rainTv"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:layout_marginRight="@dimen/fourdp_spacing"                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+            />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

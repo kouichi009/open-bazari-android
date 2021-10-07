@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <!-- toolbar -->
+    <include layout="@layout/snippet_simple_backarrow"/>
+
+    <RelativeLayout
+            android:id="@+id/sellerPayLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/appbar_padding_top"
+    >
+
+        <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="送料込み(あなたが負担)"
+                android:textColor="@color/black"
+        />
+
+        <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="売れやすい"
+                android:layout_toRightOf="@+id/tv1"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:background="@drawable/flame_black"
+                android:padding="4dp"
+
+                android:textColor="@color/black"
+        />
+
+        <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="アップル"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_below="@+id/tv1"
+
+        />
+
+
+
+
+    </RelativeLayout>
+
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/grey"
+          android:layout_marginTop="@dimen/activity_horizontal_margin"
+          android:layout_below="@+id/tv3"/>
+
+    <RelativeLayout
+            android:id="@+id/purchaserPayLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/appbar_padding_top"
+    >
+
+        <TextView
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="送料込み"
+                android:textColor="@color/black"
+        />
+
+
+        <TextView
+                android:id="@+id/tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="アップル"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_below="@+id/tv4"
+
+        />
+
+
+
+
+    </RelativeLayout>
+
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/grey"
+          android:layout_marginTop="@dimen/activity_horizontal_margin"
+          android:layout_below="@+id/tv6"/>
+
+</LinearLayout>

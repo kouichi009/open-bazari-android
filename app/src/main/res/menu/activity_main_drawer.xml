@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view"
+      tools:context=".Activities.MainActivity" >
+
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/nav_home"
+                android:icon="@drawable/ic_home"
+                android:title="@string/fragment_home"/>
+        <item
+                android:id="@+id/nav_notification"
+                android:icon="@drawable/ic_notification"
+                android:title="@string/fragment_noti" />
+        <item
+                android:id="@+id/nav_post"
+                android:icon="@drawable/ic_camera"
+                android:title="@string/activity_post"/>
+        <item
+                android:id="@+id/nav_sell"
+                android:icon="@drawable/ic_sell"
+                android:title="@string/activity_sold"/>
+
+        <item
+                android:id="@+id/nav_purchase"
+                android:icon="@drawable/ic_purchase"
+                android:title="@string/activity_purchase"/>
+
+        <item
+                android:id="@+id/nav_good"
+                android:icon="@drawable/ic_good2"
+                android:title="@string/activity_good"/>
+
+        <item
+                android:id="@+id/nav_comment"
+                android:icon="@drawable/ic_speech_bubble"
+                android:title="@string/activity_comment"/>
+
+        <item
+                android:id="@+id/nav_sell_management"
+                android:icon="@drawable/ic_wallet"
+                android:title="@string/activity_sell_management"/>
+
+        <item
+                android:id="@+id/nav_setting"
+                android:icon="@drawable/ic_setting"
+                android:title="@string/activity_setting"/>
+
+        <item
+                android:id="@+id/nav_question"
+                android:icon="@drawable/ic_question"
+                android:title="@string/activity_question"/>
+
+
+
+    </group>
+
+</menu>

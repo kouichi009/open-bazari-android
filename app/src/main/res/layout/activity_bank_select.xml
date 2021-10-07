@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/lightGray"
+        tools:context=".Activities.SalesManagementActivity">
+
+    <include layout="@layout/snippet_simple_backarrow"/>
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView"
+            >
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+            <RelativeLayout
+                    android:id="@+id/bankLayout"
+                    android:layout_marginTop="@dimen/appbar_padding_top"
+                    android:layout_marginBottom="@dimen/appbar_padding_top"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                <TextView
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="銀行名"/>
+
+                <TextView
+                        android:id="@+id/bankNameTv"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+
+                    android:padding="@dimen/appbar_padding_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                <TextView
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="口座種別"/>
+
+                <Spinner
+                        android:id="@+id/spinner"
+                        android:textAlignment="textEnd"
+                        android:layout_width="@dimen/bankEdit"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/activity_horizontal_margin"
+                        android:layout_alignParentRight="true" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                    android:padding="@dimen/appbar_padding_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                <TextView
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="支店コード"/>
+
+                <EditText
+                        android:id="@+id/accountCodeEdit"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="@dimen/bankEdit"
+                        android:layout_height="wrap_content"
+                        android:hint="数字3ケタ"
+                />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+
+                    android:padding="@dimen/appbar_padding_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                <TextView
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="口座番号"/>
+
+                <EditText
+                        android:id="@+id/accountNumberEdit"
+                        android:inputType="number"
+                        android:maxLength="7"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="@dimen/bankEdit"
+                        android:layout_height="wrap_content"
+                        android:hint="数字7ケタ"
+                />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                    android:padding="@dimen/appbar_padding_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                <TextView
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="口座名義(セイ)"/>
+
+                <EditText
+                        android:id="@+id/lastNameEdit"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="@dimen/bankEdit"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="例）タナカ"
+                />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                    android:padding="@dimen/appbar_padding_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                <TextView
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="口座名義(メイ)"/>
+
+                <EditText
+                        android:id="@+id/firstNameEdit"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="@dimen/bankEdit"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="例）タロウ"
+                />
+
+
+            </RelativeLayout>
+
+            <TextView
+                    android:text="*口座番号が7ケタ未満の場合は、先頭に0をつけて7桁にしてください。(例:12345の場合 0012345)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+            android:layout_margin="@dimen/activity_horizontal_margin"/>
+
+            <TextView
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:text="※入力した口座名義と振込先の口座名義が一致しない場合、振込を受け取る事ができません。振込先の口座名義を必ずご確認の上、ご入力ください。"
+                    android:layout_width="wrap_content"
+                    android:textSize="12sp"
+
+                    android:layout_height="wrap_content"/>
+
+
+            <Button
+                    android:id="@+id/registerBtn"
+                    android:layout_margin="26dp"
+                    android:background="@color/colorAccent"
+                    android:textColor="@color/white"
+                    android:text="口座を登録する"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

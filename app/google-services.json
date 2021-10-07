@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "15746180814",
+    "firebase_url": "https://bazari-2d952.firebaseio.com",
+    "project_id": "bazari-2d952",
+    "storage_bucket": "bazari-2d952.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15746180814:android:f5c14bd0b8fd6591",
+        "android_client_info": {
+          "package_name": "jp.bazari"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "15746180814-1l4t0hrhvcl9t9rq6h336fhdr3a9o28h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsgCyKrt1ORn1YWHWf0JkfAy0ZBBmKrwQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

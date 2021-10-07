@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/snippet_simple_backarrow"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:id="@+id/scrollView">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <RelativeLayout
+                    android:background="@color/lightGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                <TextView
+                        android:id="@+id/tv1"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="12sp"
+                        android:text="使用可能なクレジットカード"
+                        />
+
+                <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/tv1"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/appbar_padding_top">
+
+                    <ImageView
+                            android:id="@+id/visaIv"
+                            android:layout_width="60dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/visa"
+
+                    />
+
+                    <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/master"
+                            android:layout_marginLeft="32dp"
+                            android:layout_toRightOf="@+id/visaIv"
+                    />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+            
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:layout_marginLeft="@dimen/appbar_padding_top"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/cardIv"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/creditcard"
+                />
+
+                <EditText
+                        android:id="@+id/cardNumEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_toRightOf="@+id/cardIv"
+                        android:hint="カード番号"
+                        android:inputType="number"
+                        android:maxLength="19"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/appbar_padding_top"
+
+                />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/tv2"
+                        android:text="期限"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="@dimen/appbar_padding_top"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/creditcard"
+                />
+
+                <EditText
+                        android:id="@+id/expireEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:textAlignment="textEnd"
+                        android:layout_toRightOf="@+id/tv2"
+                        android:hint="MM/YY"
+                        android:inputType="date"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/appbar_padding_top"
+
+                />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/tv3"
+                        android:text="cvv"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="@dimen/appbar_padding_top"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/creditcard"
+                />
+                
+                <ImageView
+                        android:id="@+id/questionIv"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/question"
+                        android:layout_toRightOf="@+id/tv3"
+                        android:layout_marginLeft="@dimen/appbar_padding_top"
+                        android:layout_centerVertical="true"
+
+                />
+
+                <EditText
+                        android:id="@+id/cvvEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_toRightOf="@+id/questionIv"
+                        android:hint="CVV"
+                        android:textAlignment="textEnd"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/appbar_padding_top"
+                        android:maxLength="3"
+                        android:inputType="number"
+                />
+
+            </RelativeLayout>
+
+            <Button
+                    android:id="@+id/registerBtn"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/colorAccent"
+                    android:text="カードを新しく登録"
+                    android:textColor="@color/white"
+            />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

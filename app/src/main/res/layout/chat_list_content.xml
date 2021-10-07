@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        android:layout_margin="4dp">
+
+    <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@mipmap/ic_launcher"
+                android:id="@+id/profileIv"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="@dimen/appbar_padding_top"/>
+        <TextView
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/profileIv"
+                android:text="Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/usernameTv"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp"
+                />
+
+        <TextView
+                android:layout_toRightOf="@+id/profileIv"
+                android:layout_below="@+id/usernameTv"
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chatTv"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                />
+        <TextView
+                android:text="Now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/timeTv"
+                android:textSize="12sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

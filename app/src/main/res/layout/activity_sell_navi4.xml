@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Activities.SellNavi4Activity">
+
+    <include layout="@layout/snippet_simple_backarrow"/>
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/lightGray"
+            android:id="@+id/scrollView"
+            android:layout_weight="1">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="8dp">
+
+                <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/postIv"
+                        android:src="@drawable/ic_launcher_background"/>
+
+                <TextView
+                        android:layout_marginLeft="@dimen/appbar_padding_top"
+                        android:layout_marginRight="@dimen/appbar_padding_top"
+                        android:text="TextViewTextViewTextViewTextViewTextTextViewTextViTextViewTextViewTextViewTexTextViewTextViewTextViewTexTextViewTextViewTextViewTexTextViewTextViewTextViewTexewTextViewTextViewTextTextViewTextViewTextViewTextViewTextTextViewTextViewTextViewTextViewText"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:id="@+id/titleTv"
+                        android:textSize="12sp"
+                        android:minLines="1"
+                        android:maxLines="2"
+                        android:layout_toRightOf="@+id/postIv"
+                />
+
+                <TextView
+                        android:id="@+id/priceTv1"
+                        android:layout_marginLeft="@dimen/appbar_padding_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3000円"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@+id/postIv"
+                        android:layout_alignParentBottom="true"/>
+
+                <TextView
+                        android:id="@+id/shipPayerTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="送料込み(あなたが負担)"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:textSize="12sp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                    android:layout_margin="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_grey"
+                    android:text="取引が完了しました。"
+                    android:textSize="17sp"/>
+
+            <TextView
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="お互いの評価が完了しました。これで取引は完了です。
+売上を現金で受け取るには、振込先の口座情報を入力し、振込申請をしてください。"
+                    android:textSize="12sp"/>
+
+            <RelativeLayout
+                    android:layout_margin="16dp"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                <TextView
+                        android:id="@+id/transactionCompleDateTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="取引完了日：2018年08月08日"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_margin="16dp"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                <ImageView
+                        android:id="@+id/valueIv"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/sun"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/valueIv"
+                        android:id="@+id/valueTv"
+                        android:text="よい評価"
+                        android:textColor="@color/black"
+                />
+
+                <TextView
+                        android:id="@+id/valueCommentTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:layout_below="@+id/valueIv"
+                        />
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_margin="16dp"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="商品代金"/>
+
+                <TextView
+                        android:id="@+id/priceTv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="300円"
+                        android:layout_alignParentRight="true"/>
+
+                <TextView
+                        android:layout_marginTop="@dimen/appbar_padding_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="販売手数料"
+                        android:layout_below="@+id/priceTv2"/>
+
+                <TextView
+                        android:id="@+id/commisionTv"
+                        android:layout_marginTop="@dimen/appbar_padding_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-10円"
+                        android:layout_below="@+id/priceTv2"
+                        android:layout_alignParentRight="true"/>
+
+                <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey"
+                        android:layout_below="@+id/commisionTv"
+                        android:layout_marginTop="8dp"
+                />
+
+                <TextView
+                        android:layout_marginTop="@dimen/appbar_padding_top"
+                        android:layout_below="@+id/view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="受け取り代金"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                <TextView
+                        android:id="@+id/profitTv"
+                        android:layout_marginTop="@dimen/appbar_padding_top"
+                        android:layout_below="@+id/view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="290円"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey">
+
+                <ImageView
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/ic_email_white"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/email_Iv"
+                />
+
+                <TextView
+                        android:layout_marginStart="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="取引メッセージ"
+                        android:textColor="@color/white"
+                        android:layout_toRightOf="@+id/email_Iv"
+                        android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/relLayout2">
+
+                <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+            >
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true">
+
+                    <EditText
+                            android:id="@+id/chatEdit"
+                            android:layout_margin="@dimen/activity_horizontal_margin"
+                            android:padding="@dimen/appbar_padding_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:gravity="left|top"
+                            android:textSize="12sp"
+                            android:hint="ここにメッセージ内容を記入してください。"
+                            android:background="@drawable/flame_gray"
+                            android:inputType="textMultiLine"/>
+
+
+                    <Button
+                            android:id="@+id/chatBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:onClick="chatTouchUpInside"
+                            android:background="@color/colorAccent"
+                            android:textColor="@color/white"
+                            android:text="取引メッセージを送る"/>
+
+                    <RelativeLayout
+                            android:padding="@dimen/appbar_padding_top"
+                            android:layout_margin="@dimen/activity_horizontal_margin"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white">
+
+                        <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="購入者情報"/>
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/profileIv"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:src="@mipmap/ic_launcher"
+                                android:layout_marginTop="@dimen/appbar_padding_top"
+                                android:layout_below="@+id/textView"/>
+
+                        <TextView
+                                android:layout_below="@+id/textView"
+                                android:layout_toRightOf="@+id/profileIv"
+                                android:id="@+id/usernameTv"
+                                android:layout_marginLeft="@dimen/appbar_padding_top"
+                                android:layout_marginTop="@dimen/appbar_padding_top"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="user13"/>
+
+                        <LinearLayout
+                                android:id="@+id/valueLayout"
+                                android:layout_marginTop="@dimen/appbar_padding_top"
+                                android:layout_below="@+id/usernameTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/profileIv"
+                                android:layout_marginLeft="@dimen/appbar_padding_top"
+                                android:orientation="horizontal">
+
+                            <ImageView
+                                    android:id="@+id/sunIv"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/sun"/>
+
+                            <TextView
+                                    android:id="@+id/sunTv"
+                                    android:layout_marginLeft="@dimen/fourdp_spacing"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10"/>
+
+                            <ImageView
+                                    android:id="@+id/cloudIv"
+                                    android:layout_marginLeft="@dimen/fourdp_spacing"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/cloud"/>
+
+                            <TextView
+                                    android:id="@+id/cloudTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/fourdp_spacing"
+                                    android:text="10"/>
+
+                            <ImageView
+                                    android:id="@+id/rainIv"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginLeft="@dimen/fourdp_spacing"
+                                    android:src="@drawable/rain"/>
+
+                            <TextView
+                                    android:id="@+id/rainTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/fourdp_spacing"
+                                    android:text="10"/>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

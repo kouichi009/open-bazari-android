@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">バザリ</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="fragment_home">ホーム</string>
+    <string name="fragment_noti">お知らせ</string>
+    <string name="activity_post">出品する</string>
+    <string name="activity_sold">販売した商品</string>
+    <string name="activity_purchase">購入した商品</string>
+    <string name="activity_good">いいねした商品</string>
+    <string name="activity_comment">コメントした商品</string>
+    <string name="activity_sell_management">売上・ポイント管理</string>
+    <string name="activity_setting">設定</string>
+    <string name="activity_cheers">アプリを応援する</string>
+    <string name="activity_question">お問い合わせ</string>
+    <string name="firebase_auth_failed">Authentication failed.</string>
+    <string name="firebase_auth_success">Authentication Successed.</string>
+    <string name="you">you</string>
+    <string name="transaction">transaction</string>
+    <string name="transactionStatus">transactionStatus</string>
+    <string name="commisionRate">commisionRate</string>
+    <string name="purchaserUid">purchaserUid</string>
+    <string name="purchaseDateTimestamp">purchaseDateTimestamp</string>
+    <string name="purchaserShouldDo">purchaserShouldDo</string>
+    <string name="sellerShouldDo">sellerShouldDo</string>
+    <string name="commentText">commentText</string>
+    <string name="timestamp">timestamp</string>
+    <string name="valueStatus">valueStatus</string>
+    <string name="valueComment">valueComment</string>
+    <string name="purchase">purchase</string>
+    <string name="sold">sold</string>
+    <string name="application">application</string>
+    <string name="NotificationActivity">NotificationActivity</string>
+    <string name="PurchaseListActivity">PurchaseListActivity</string>
+    <string name="SellListActivity">SellListActivity</string>
+    <string name="sharedPreferencesKey">sharedPreferencesKey</string>
+    <string name="FCMToken">FCMToken</string>
+    <string name="complain">通報する</string>
+    <string name="delete">削除する</string>
+    <string name="sold_out">SOLD OUT</string>
+    <string name="good_seller">よい出品者です</string>
+    <string name="normal_seller">ふつうの出品者です</string>
+    <string name="bad_seller">わるい出品者です</string>
+    <string name="caption_hint">商品の状態などを記載してください。\n 例）3年前ぐらいに5万円で購入した一眼レフレンズです。傷が多々あります。動作に関しては問題ありません。</string>
+    <string name="shipway">shipway</string>
+    <string name="shipdeadline">shipdeadline</string>
+    <string name="prefecture">prefecture</string>
+    <string name="CAMERA">カメラ</string>
+
+    <string name="SELF_INTRODUCTION">SELF_INTRODUCTION</string>
+
+    <string name="facebook_app_id">243002166570918</string>
+    <string name="fb_login_protocol_scheme">fb243002166570918</string>
+    <string name="thumbnailRatio">thumbnailRatio</string>
+
+    <string name="kiyakusharedPref">kiyakusharedPref</string>
+    <string name="isKiyakuAgreeKey">isKiyakuAgreeKey</string>
+
+
+    <!-- 選択肢 -->
+    <string-array name="bankTypes">
+        <item>普通</item>
+        <item>当座</item>
+        <item>貯蓄</item>
+    </string-array>
+
+    <!-- 選択肢 -->
+    <string-array name="mailQuestionTypes">
+        <item>アプリの不具合</item>
+        <item>機能の要望</item>
+        <item>その他</item>
+    </string-array>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="default_notification_channel_name" translatable="true">News</string>
+
+
+</resources>

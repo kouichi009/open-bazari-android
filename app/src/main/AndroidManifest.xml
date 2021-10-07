@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="jp.bazari">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+            android:name=".Apis.MyApplication"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher_bazari"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_bazari_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <meta-data
+                android:name="com.facebook.sdk.ApplicationId"
+                android:value="@string/facebook_app_id"/>
+
+        <activity
+                android:name="com.facebook.FacebookActivity"
+                android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+                android:label="@string/app_name"/>
+        <activity
+                android:name="com.facebook.CustomTabActivity"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="@string/fb_login_protocol_scheme"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".Activities.MainActivity"
+                android:label="@string/app_name"
+                android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activities.PostActivity">
+        </activity>
+        <activity android:name=".Activities.SellListActivity">
+        </activity>
+        <activity android:name=".Activities.PurchaseListActivity">
+        </activity>
+        <activity android:name=".Activities.LikeListActivity">
+        </activity>
+        <activity android:name=".Activities.CommentListActivity">
+        </activity>
+        <activity android:name=".Activities.SettingActivity">
+        </activity>
+        <activity android:name=".Activities.QuestionActivity">
+        </activity>
+        <activity android:name=".Activities.NotificationActivity">
+        </activity>
+        <activity android:name=".Activities.DetailActivity">
+        </activity>
+        <activity android:name=".Activities.PurchaseNavi1Activity">
+        </activity>
+        <activity android:name=".Activities.PurchaseNavi2Activity">
+        </activity>
+        <activity android:name=".Activities.PurchaseNavi3Activity">
+        </activity>
+        <activity android:name=".Activities.PurchaseNavi4Activity">
+        </activity>
+        <activity android:name=".Activities.SellNavi1Activity">
+        </activity>
+        <activity android:name=".Activities.SellNavi2Activity">
+        </activity>
+        <activity android:name=".Activities.SellNavi3Activity">
+        </activity>
+        <activity android:name=".Activities.SellNavi4Activity">
+        </activity>
+        <activity android:name=".Activities.CommentsActivity">
+        </activity>
+        <activity android:name=".Activities.RegisterActivity">
+        </activity>
+        <activity android:name=".Activities.EmailRegisterActivity">
+        </activity>
+        <activity android:name=".Activities.EmailLoginActivity">
+        </activity>
+
+        <!-- [START firebase_service] -->
+        <service android:name=".Apis.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <activity android:name=".Activities.PurchaseActivity">
+        </activity>
+        <activity android:name=".Activities.SalesManagementActivity">
+        </activity>
+        <activity android:name=".Activities.BankSelectActivity">
+        </activity>
+        <activity android:name=".Activities.TransferApplicationActivity">
+        </activity>
+        <activity android:name=".Activities.ApplyTransferScheduleActivity">
+        </activity>
+        <activity android:name=".Activities.BanksListActivity">
+        </activity>
+        <activity android:name=".Activities.AgyouListActivity">
+        </activity>
+        <activity android:name=".Activities.BanksNameListActivity">
+        </activity>
+        <activity android:name=".Activities.ChargeActivity">
+        </activity>
+        <activity android:name=".Activities.Name_AddressActivity">
+        </activity>
+        <activity android:name=".Activities.PrefectureListActivity">
+        </activity>
+        <activity android:name=".Activities.ValueActivity">
+        </activity>
+        <activity android:name=".Activities.ProfileEditActivity">
+        </activity>
+        <activity android:name=".Activities.CreditCardRegisterActivity">
+        </activity>
+        <activity android:name=".Activities.DisplayCardActivity">
+        </activity>
+        <activity android:name=".Activities.CaptionEditActivity">
+        </activity>
+        <activity android:name=".Activities.CategorySelectActivity">
+        </activity>
+        <activity android:name=".Activities.BrandSelectActivity">
+        </activity>
+        <activity android:name=".Activities.ProductStatusActivity">
+        </activity>
+        <activity android:name=".Activities.ShipPayerSelectActivity">
+        </activity>
+        <activity android:name=".Activities.ShipInfoSelectActivity">
+        </activity>
+        <activity android:name=".Activities.ProfileUserActivity">
+        </activity>
+        <activity android:name=".Activities.ScheduleTransferActivity">
+        </activity>
+        <activity android:name=".Activities.KiyakuAgreeActivity">
+        </activity>
+        <activity android:name=".Activities.KiyakuExplainActivity">
+        </activity>
+    </application>
+
+</manifest>

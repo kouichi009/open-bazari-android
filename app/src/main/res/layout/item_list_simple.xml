@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+    <TextView
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:id="@+id/itemTv"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:textSize="16sp"
+            android:text="三井住友銀行"
+            android:gravity="center"/>
+
+</RelativeLayout>

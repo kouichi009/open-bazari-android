@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:padding="8dp">
+
+        <TextView
+                android:id="@+id/titleTv"
+                android:textSize="@dimen/medium_text"
+                android:text="振込申請"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/statusTv"
+                android:background="@drawable/flame_black"
+                android:padding="4dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="申請済"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/priceTv"
+                android:layout_alignParentRight="true"
+                android:text="-2000円"
+                android:textSize="@dimen/medium_text"
+                android:textColor="@color/colorRed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/dateTv"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/medium_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018年11月25日"/>
+
+
+    </RelativeLayout>
+
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/view"
+            android:background="@color/grey"
+
+    />
+
+</LinearLayout>

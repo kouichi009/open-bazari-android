@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Activities.PostActivity">
+
+    <!-- toolbar -->
+    <include layout="@layout/snippet_simple_backarrow"/>
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:id="@+id/scrollView"
+            android:layout_weight="1">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="25"
+                        >
+
+                    <ImageView
+                            android:id="@+id/pickIv0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+
+                    <Button
+                            android:id="@+id/closeBtn0"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/close"
+                    />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="25"
+                        >
+
+                    <ImageView
+                            android:id="@+id/pickIv1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                    />
+
+                    <Button
+                            android:id="@+id/closeBtn1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/close"
+                    />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="25"
+                        >
+
+                    <ImageView
+                            android:id="@+id/pickIv2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                    />
+
+                    <Button
+                            android:id="@+id/closeBtn2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/close"
+                    />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="25"
+                        >
+
+                    <ImageView
+                            android:id="@+id/pickIv3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                    />
+
+                    <Button
+                            android:id="@+id/closeBtn3"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/close"
+                    />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/grey">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="商品名と説明"
+                        android:layout_marginLeft="@dimen/appbar_padding_top"
+                        android:layout_alignParentBottom="true"
+                        android:paddingBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                <EditText
+                        android:id="@+id/titleEdit"
+                        android:layout_marginLeft="@dimen/appbar_padding_top"
+                        android:layout_marginRight="@dimen/appbar_padding_top"
+                        android:layout_marginTop="@dimen/appbar_padding_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="商品名（必須、40文字まで)"/>
+
+                <RelativeLayout
+                        android:id="@+id/captionLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/appbar_padding_top">
+
+                    <TextView
+                            android:id="@+id/captionTv"
+                            android:padding="@dimen/appbar_padding_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/caption_hint"
+                            android:background="@color/lightGray"
+                            android:layout_toLeftOf="@+id/iv1"/>
+
+                    <ImageView
+                            android:id="@+id/iv1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_next"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                    />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/grey">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="商品の詳細"
+                        android:layout_marginLeft="@dimen/appbar_padding_top"
+                        android:layout_alignParentBottom="true"
+                        android:paddingBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/categoryLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_height"
+                    android:padding="@dimen/appbar_padding_top"
+                    android:background="@color/white">
+
+                <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="カテゴリー"/>
+
+                <TextView
+                        android:id="@+id/categoryTv"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(必須)"
+                        android:layout_alignParentRight="true"
+                        android:textAlignment="textEnd"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/brandLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_height"
+                    android:padding="@dimen/appbar_padding_top"
+                    android:background="@color/white">
+
+                <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="メーカー"/>
+
+                <TextView
+                        android:id="@+id/brandTv"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(任意)"
+                        android:textColor="@color/grey"
+                        android:layout_alignParentRight="true"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/productStatusLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_height"
+                    android:padding="@dimen/appbar_padding_top"
+                    android:background="@color/white">
+
+                <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+
+                        android:text="商品の状態"/>
+
+                <TextView
+                        android:id="@+id/statusTv"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(必須)"
+                        android:layout_alignParentRight="true"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/grey">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="配送について"
+                        android:layout_marginLeft="@dimen/appbar_padding_top"
+                        android:layout_alignParentBottom="true"
+                        android:paddingBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/shipPayerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_height"
+                    android:padding="@dimen/appbar_padding_top"
+                    android:background="@color/white">
+
+                <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+
+                        android:text="配送料の負担"/>
+
+                <TextView
+                        android:id="@+id/shipPayerTv"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="送料"
+                        android:textColor="@color/black"
+                        android:layout_alignParentRight="true"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/shipWayLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_height"
+                    android:padding="@dimen/appbar_padding_top"
+                    android:background="@color/white">
+
+                <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+
+                        android:text="配送方法"/>
+
+                <TextView
+                        android:id="@+id/shipWayTv"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(任意)"
+                        android:textColor="@color/grey"
+                        android:layout_alignParentRight="true"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/shipDeadLineLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_height"
+                    android:padding="@dimen/appbar_padding_top"
+                    android:background="@color/white">
+
+                <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="配送日の目安"/>
+
+                <TextView
+                        android:id="@+id/shipDeadLineTv"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="支払い後"
+                        android:textColor="@color/black"
+                        android:layout_alignParentRight="true"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/shipPrefecutreLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_height"
+                    android:padding="@dimen/appbar_padding_top"
+                    android:background="@color/white">
+
+                <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+
+                        android:text="配送元の地域"/>
+
+                <TextView
+                        android:id="@+id/prefectureTv"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(必須)"
+                        android:layout_alignParentRight="true"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/grey">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="価格について"
+                        android:layout_marginLeft="@dimen/appbar_padding_top"
+                        android:layout_alignParentBottom="true"
+                        android:paddingBottom="10dp"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_height"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:background="@color/white">
+
+                <TextView
+                        android:id="@+id/tv1"
+                        android:layout_marginLeft="@dimen/appbar_padding_top"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+
+                        android:text="商品価格"/>
+
+                <EditText
+                        android:id="@+id/priceEdit"
+                        android:layout_toRightOf="@+id/tv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:textAlignment="textEnd"
+                        android:inputType="number"
+                        android:hint="¥0"
+                />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_height"
+                    android:padding="@dimen/appbar_padding_top"
+                    android:background="@color/white">
+
+                <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="販売手数料"/>
+
+                <TextView
+                        android:id="@+id/commisionTv"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/appbar_padding_top"
+                        android:layout_alignParentRight="true"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_height"
+                    android:padding="@dimen/appbar_padding_top"
+                    android:background="@color/white">
+
+                <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="受取金額"/>
+
+                <TextView
+                        android:id="@+id/profitTv"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/appbar_padding_top"
+                        android:layout_alignParentRight="true"/>
+
+
+            </RelativeLayout>
+
+
+            <Button
+                    android:id="@+id/postBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="出品する"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:background="@color/colorRed"
+            />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

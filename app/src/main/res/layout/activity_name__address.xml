@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Activities.Name_AddressActivity">
+
+    <include layout="@layout/snippet_simple_backarrow"/>
+
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:id="@+id/alertLayout"
+                    android:padding="@dimen/appbar_padding_top"
+                    android:background="@drawable/orange_flame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+            >
+
+                <TextView
+                        android:text="配送先住所が登録されていません。"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                />
+                <TextView
+                        android:layout_marginTop="@dimen/appbar_padding_top"
+                        android:text="購入を申し込むためには、配送先情報の入力が必要です。\n氏名・住所・電話番号を正確にご入力ください。\n※氏名は必ず本名を記入してください。\n※これらの情報は、商品購入時、販売者にのみ伝えられます。"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                />
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey">
+
+                <TextView
+                        android:text="取引に必要な情報"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+            >
+
+                <TextView
+                        android:id="@+id/tv1"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="姓(全角)"
+                />
+
+                <EditText
+                        android:id="@+id/lastNameKanjiEdit"
+                        android:layout_toRightOf="@+id/tv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:hint="姓"
+                        android:inputType="text"
+                        android:textAlignment="textEnd"
+                />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/tv2"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="名(全角)"
+                />
+
+                <EditText
+                        android:id="@+id/firstNameKanjiEdit"
+                        android:layout_toRightOf="@+id/tv2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="名"
+                        android:inputType="text"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:textAlignment="textEnd"
+                />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/tv3"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="セイ(全角カナ)"
+                />
+
+                <EditText
+                        android:id="@+id/lastNameEdit"
+                        android:layout_toRightOf="@+id/tv3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="セイ"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:textAlignment="textEnd"
+                        android:inputType="text"
+
+                />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/tv4"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="メイ(全角カナ)"
+                />
+
+                <EditText
+                        android:id="@+id/firstNameEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv4"
+                        android:hint="メイ"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:textAlignment="textEnd"
+                        android:inputType="text"
+
+                />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/tv5"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="電話番号"
+                />
+
+                <EditText
+                        android:id="@+id/phoneEdit"
+                        android:layout_toRightOf="@+id/tv5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="ハイフンなしで入力"
+                        android:inputType="number"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:textAlignment="textEnd"
+
+                />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey">
+
+                <TextView
+                        android:text="配送先住所"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/tv6"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="郵便番号"
+                />
+
+                <EditText
+                        android:id="@+id/postalCodeEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="ハイフンなしで入力"
+                        android:inputType="number"
+                        android:layout_toRightOf="@+id/tv6"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:textAlignment="textEnd"
+                />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/prefectureLayout"
+                    android:layout_width="match_parent"
+                    android:background="@color/lightGray"
+                    android:layout_height="44dp">
+
+                <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="都道府県"
+                />
+
+
+                <TextView
+                        android:id="@+id/prefectureTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="16sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/appbar_padding_top"
+                />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/tv7"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="市区町村"
+                />
+
+                <EditText
+                        android:id="@+id/cityEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="◯◯市、△△区"
+                        android:layout_toRightOf="@+id/tv7"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:textAlignment="textEnd"
+                        android:inputType="text"
+
+                />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/tv8"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="町名番地"
+                />
+
+                <EditText
+                        android:id="@+id/tyouEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="◯◯町、△△番地"
+                        android:layout_toRightOf="@+id/tv8"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:textAlignment="textEnd"
+                        android:inputType="text"
+
+                />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/tv9"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="建物名"
+                />
+
+                <EditText
+                        android:id="@+id/buildEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv9"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:hint="□□マンション123"
+                        android:textAlignment="textEnd"
+                        android:inputType="text"
+
+                />
+
+            </RelativeLayout>
+
+            <Button
+                    android:id="@+id/saveBtn"
+                    android:text="保存する"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:background="@color/colorAccent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+            />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
